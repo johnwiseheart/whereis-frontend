@@ -21,7 +21,7 @@ export default class App extends React.Component<{}, AppState> {
 	}
 
 	componentWillMount() {
-		fetch('http://localhost:5000')
+		fetch('http://whereis.dynamic.jcaw.me')
 			.then((resp: Response) => resp.json() as Promise<Array<any>>)
 			.then((devices: Array<any>) => {
 				
