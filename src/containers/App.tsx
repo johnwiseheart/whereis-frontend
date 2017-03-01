@@ -100,7 +100,7 @@ export default class App extends React.Component<{}, AppState> {
 			<div style={styles.flexWrapper}>
 				<div style={styles.flexItem}>
 					<div style={styles.flexItemInner}>
-						<h1>Where is John at?</h1>
+						<h1>Where is John?</h1>
 					</div>
 				</div>
 
