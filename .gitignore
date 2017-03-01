@@ -1,0 +1,4 @@
+node_modules
+ts-build
+.vscode
+.npm
