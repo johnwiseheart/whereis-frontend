@@ -10,11 +10,11 @@ let plugins = [
     }
   }),
   // minifies your code
-  new webpack.optimize.UglifyJsPlugin({
-    compressor: {
-      warnings: false
-    }
-  })
+  // new webpack.optimize.UglifyJsPlugin({
+  //   compressor: {
+  //     warnings: false
+  //   }
+  // })
 ]
 
 baseConfig.plugins = plugins.concat(baseConfig.plugins)
