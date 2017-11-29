@@ -5,7 +5,7 @@ var WebpackNotifierPlugin = require('webpack-notifier');
 module.exports = {
 
   entry: [
-    'index.tsx'
+    'babel-polyfill', 'index.tsx'
   ],
   output: {
     filename: 'app.js',
@@ -20,7 +20,16 @@ module.exports = {
     loaders: [
       // .ts(x) files should first pass through the Typescript loader, and then through babel
       { test: /\.tsx?$/, loaders: ['babel-loader', 'ts-loader'] },
-      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] }
+      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
+      { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
+      {
+        test: /\.(ttf|eot|woff|woff2|svg)$/,
+        loader: "file-loader",
+        options: {
+          name: "fonts/[name].[ext]",
+        },
+      },
+
     ]
   },
   plugins: [

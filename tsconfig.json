@@ -5,10 +5,10 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false,
     "sourceMap": true,
     "outDir": "ts-build",
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules"
