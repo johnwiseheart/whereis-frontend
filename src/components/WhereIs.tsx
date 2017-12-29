@@ -31,6 +31,7 @@ interface IWhereIsProps {
     location: string;
     coordinates: ICoordinates;
     weather: IWeatherState;
+    timezone: string;
     milliseconds: number;
 }
 
@@ -47,7 +48,7 @@ class WhereIs extends React.Component<IWhereIsProps, {}> {
     }
 
     public render() {
-        const { coordinates, location, milliseconds, weather } = this.props;
+        const { coordinates, location, milliseconds, timezone, weather } = this.props;
 
         const maybeRenderMap = coordinates
             ? (
@@ -72,7 +73,7 @@ class WhereIs extends React.Component<IWhereIsProps, {}> {
             : <Loader />;
 
         const maybeRenderTime = milliseconds
-            ? <TimePanel milliseconds={milliseconds} />
+            ? <TimePanel milliseconds={milliseconds} timezone={timezone}/>
             : <Loader />;
 
         return (

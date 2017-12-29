@@ -64,8 +64,8 @@ export function* fetchWeather(payload) {
 export function* fetchTimezone(payload) {
     try {
         const data = yield call(api.fetchTimezone, payload);
-        yield call(startClock);
         yield put(FETCH_TIMEZONE.success(data));
+        yield call(startClock);
     } catch (error) {
         yield put(FETCH_TIMEZONE.failure(error));
     }

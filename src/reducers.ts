@@ -16,7 +16,7 @@ export const whereisApp = (state: IAppState = initialState, action: IAppAction) 
         case FETCH_TIMEZONE.SUCCESS:
             return {
                 ...state,
-                timezone: action.data.timezoneId,
+                timezone: action.data.timeZoneId,
             };
         case FETCH_GEOCODE.SUCCESS:
             return {
